@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Event Ticket Booking Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for professional UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="app-viewport-root" class="app-container">
+        <!-- Main Booking Screen Area -->
+        <main id="booking-workspace" class="booking-area">
+            <header id="workspace-header" class="booking-header">
+                <div id="header-text-block">
+                    <h1 id="main-title">Grand Arena Center Stage</h1>
+                    <p id="main-subtitle" class="subtitle">Select your preferred seats. Prices adjust dynamically based on demand.</p>
+                </div>
+                <!-- Live Monitoring Metrics Widget -->
+                <div id="live-traffic-widget" class="live-counter-widget">
+                    <span id="live-indicator-dot" class="pulse-dot"></span>
+                    <span id="live-users-text" class="counter-text"><i class="fa-solid fa-users"></i> 612 users active live</span>
+                </div>
+            </header>
+
+            <!-- Screen Orientation Guide -->
+            <div id="stage-orientation-guide" class="stage-container">
+                <div id="stage-visual-glow" class="stage-glow"></div>
+                <div id="stage-label" class="stage-text">STAGE THIS WAY</div>
+            </div>
+
+            <!-- Legends Bar -->
+            <div id="ui-legend-bar" class="legend-container">
+                <div id="legend-item-available" class="legend-item"><span class="seat-sample available"></span> Available</div>
+                <div id="legend-item-selected" class="legend-item"><span class="seat-sample selected"></span> Selected</div>
+                <div id="legend-item-reserved" class="legend-item"><span class="seat-sample reserved"></span> Reserved</div>
+            </div>
+
+            <!-- Seating Grid Target Container -->
+            <div id="grid-viewport" class="seating-grid-wrapper">
+                <div id="seating-matrix" class="seating-matrix"></div>
+            </div>
+        </main>
+
+        <!-- Right Side Checkout Panel -->
+        <aside id="checkout-sidebar" class="checkout-panel">
+            <div id="user-profile-card" class="panel-card user-profile-summary">
+                <div id="user-avatar-icon" class="avatar"><i class="fa-solid fa-user-shield"></i></div>
+                <div id="user-meta-info">
+                    <h4 id="user-display-name">Ayush Nagar</h4>
+                    <p id="user-verification-badge" class="account-badge"><i class="fa-solid fa-circle-check"></i> Verified Account</p>
+                </div>
+            </div>
+
+            <div id="billing-summary-card" class="panel-card reservation-summary">
+                <h3 id="billing-card-title">Reservation Summary</h3>
+                <hr id="divider-top" class="divider">
+                
+                <div id="empty-state-msg" class="empty-state">
+                    <i id="empty-state-icon" class="fa-solid fa-ticket-simple"></i>
+                    <p id="empty-state-text">No seats selected yet.<br>Click on the grid to begin booking.</p>
+                </div>
+
+                <div id="selected-seats-container" class="selected-seats-list"></div>
+                
+                <hr id="divider-bottom" class="divider">
+
+                <!-- Dynamic Pricing Computations Layout -->
+                <div id="price-computation-block" class="price-breakdown">
+                    <div id="row-base-price" class="price-row">
+                        <span class="row-label">Base Ticket Price</span>
+                        <span id="base-price" class="row-value">₹0.00</span>
+                    </div>
+                    <div id="row-dynamic-fee" class="price-row">
+                        <span class="row-label">Dynamic Optimization Fee</span>
+                        <span id="dynamic-fee" class="row-value">₹0.00</span>
+                    </div>
+                    <div id="row-grand-total" class="price-row total-row">
+                        <span class="row-label-bold">Total Payable</span>
+                        <span id="grand-total" class="row-value-bold">₹0.00</span>
+                    </div>
+                </div>
+
+                <button id="book-now-btn" class="checkout-btn" disabled>
+                    <i id="btn-icon" class="fa-solid fa-bolt"></i> <span id="btn-text">Confirm Secure Booking</span>
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

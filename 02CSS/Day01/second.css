@@ -1,0 +1,9 @@
+/* select by class name */
+/* You need to apply dot(.) first */
+.first{
+    background-color: bisque;
+}
+.second{
+    color: rgb(11, 33, 175);
+    background-color: aqua;
+}

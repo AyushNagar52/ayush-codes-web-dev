@@ -1,0 +1,30 @@
+.card{
+    width: 30vw;
+    height: 10vw;
+    background-color:antiquewhite;
+    border: 5px green solid;
+    padding: 10px;
+    margin: 20px 20px 20px 35vw;
+}
+
+body{
+    background-color: cyan;
+}
+
+h2{
+    color: blue;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+.card:hover {
+    background-color: pink;
+    transform: scale(1.2);
+}

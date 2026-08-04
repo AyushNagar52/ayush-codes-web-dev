@@ -1,0 +1,19 @@
+.first{
+    background-color: orange;
+    height: 200px;
+    width: 250px;
+}
+.second{
+    background-color: aqua;
+    height: 200px;
+    width: 250px;
+    margin: 100px;
+}
+
+span{
+    background-color: green;
+    display: inline;
+    margin: 40px;
+    width: 250px;
+    margin: 100px
+}

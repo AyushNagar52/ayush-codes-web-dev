@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 80vw;
+    width: 80vw;
+    background-color: gray;
+    display: grid;
+    /* grid-template-columns: repeat(8,1fr) ;
+    grid-template-rows: repeat(8,1fr) ; */
+
+    grid-template-columns: repeat(8,100px) ;
+    grid-template-rows: repeat(8,100px) ; 
+
+    /* grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px ;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px ; */
+
+}
+
+.white{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+
+.black{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Event Ticket Booking Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Global Progress Step Tracker Bar -->
+    <div id="booking-progress-wizard">
+        <div id="step-1-indicator" class="wizard-step active"><i class="fa-solid fa-couch"></i> 1. Select Seats</div>
+        <div class="wizard-connector"></div>
+        <div id="step-2-indicator" class="wizard-step"><i class="fa-solid fa-user-shield"></i> 2. Information</div>
+        <div class="wizard-connector"></div>
+        <div id="step-3-indicator" class="wizard-step"><i class="fa-solid fa-credit-card"></i> 3. Payment</div>
+    </div>
+
+    <div id="app-viewport-root" class="app-container">
+        
+        <!-- PAGE 1: SEAT SELECTION VIEW -->
+        <main id="page-1-workspace" class="booking-area view-page active">
+            <header class="booking-header">
+                <div>
+                   <h1 class="logo">
+  GatePassify- <span class="author">by Ayush</span>
+</h1>
+                    <p class="subtitle">Select your preferred seats. Prices adjust dynamically based on demand.</p>
+                </div>
+                <div class="live-counter-widget">
+                    <span class="pulse-dot"></span>
+                    <span id="live-users-text" class="counter-text"><i class="fa-solid fa-users"></i> 612 users active live</span>
+                </div>
+            </header>
+
+            <div class="stage-container">
+                <div class="stage-glow"></div>
+                <div class="stage-text">STAGE THIS WAY</div>
+            </div>
+
+            <div class="legend-container">
+                <div class="legend-item"><span class="seat-sample available"></span> Available</div>
+                <div class="legend-item"><span class="seat-sample selected"></span> Selected</div>
+                <div class="legend-item"><span class="seat-sample reserved"></span> Reserved</div>
+            </div>
+
+            <div class="seating-grid-wrapper">
+                <div id="seating-matrix" class="seating-matrix"></div>
+            </div>
+        </main>
+
+        <!-- PAGE 2: USER ACCOUNT & BILLING INFO VIEW -->
+        <main id="page-2-workspace" class="booking-area view-page">
+            <header class="booking-header">
+                <div>
+                    <h1>Secure User Checkout & Verification</h1>
+                    <p class="subtitle">Please fill out your verified details to complete the gate reservation.</p>
+                </div>
+            </header>
+
+            <div class="form-container-wrapper">
+                <form id="checkout-info-form" onsubmit="event.preventDefault();">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="input-fullname">Full Name</label>
+                            <input type="text" id="input-fullname" class="form-control" value="Ayush Nagar" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-email">Email Address</label>
+                            <input type="email" id="input-email" class="form-control" value="ayushnagar5350@gmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-phone">Phone Number</label>
+                            <input type="tel" id="input-phone" class="form-control" value="+91-9079644035" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-city">Billing Location / City</label>
+                            <input type="text" id="input-city" class="form-control" value="Kota, Rajasthan" required>
+                        </div>
+                    </div>
+                    <div class="security-assurance-card">
+                        <i class="fa-solid fa-shield-halved text-primary-color"></i>
+                        <p>Your session is protected with 256-bit point-to-point network data layer encryption rules.</p>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- PAGE 3: PAYMENT & RECEIPT COMPLETION VIEW -->
+        <main id="page-3-workspace" class="booking-area view-page">
+            <header class="booking-header">
+                <div>
+                    <h1>Payment Gateway Authorization</h1>
+                    <p class="subtitle">Complete settlement transaction routing simulated live framework profiles.</p>
+                </div>
+            </header>
+
+            <div class="payment-selection-container">
+                <h3>Select Payment Architecture</h3>
+                <div class="payment-methods-grid">
+                    <div class="pay-method-card active" data-method="upi">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <span>BHIM / UPI Apps</span>
+                    </div>
+                    <div class="pay-method-card" data-method="card">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Credit / Debit Card</span>
+                    </div>
+                    <div class="pay-method-card" data-method="netbanking">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>Net Banking</span>
+                    </div>
+                </div>
+
+                <!-- Simulated Success Receipt Form (Hidden until checkout clicked) -->
+                <div id="receipt-success-block" class="receipt-card">
+                    <div class="receipt-success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h2>Booking Successfully Confirmed!</h2>
+                    <p class="receipt-tx-id">Transaction ID: TXN-8934729184-RTU</p>
+                    <div id="receipt-details-output"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Side Checkout Panel (Persistent across pages for calculations summary) -->
+        <aside id="checkout-sidebar" class="checkout-panel">
+            <div id="user-profile-card" class="panel-card user-profile-summary">
+                <div id="user-avatar-icon" class="avatar"><i class="fa-solid fa-user-shield"></i></div>
+                <div id="user-meta-info">
+                    <h4 id="user-display-name">Ayush Nagar</h4>
+                    <p id="user-verification-badge" class="account-badge"><i class="fa-solid fa-circle-check"></i> Verified Account</p>
+                </div>
+            </div>
+
+            <div id="billing-summary-card" class="panel-card reservation-summary">
+                <h3 id="billing-card-title">Reservation Summary</h3>
+                <hr class="divider">
+                
+                <div id="empty-state-msg" class="empty-state">
+                    <i id="empty-state-icon" class="fa-solid fa-ticket-simple"></i>
+                    <p id="empty-state-text">No seats selected yet.<br>Click on the grid to begin booking.</p>
+                </div>
+
+                <div id="selected-seats-container" class="selected-seats-list"></div>
+                
+                <hr class="divider">
+
+                <div id="price-computation-block" class="price-breakdown">
+                    <div class="price-row">
+                        <span class="row-label">Base Ticket Price</span>
+                        <span id="base-price" class="row-value">₹0.00</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="row-label">Dynamic Optimization Fee</span>
+                        <span id="dynamic-fee" class="row-value">₹0.00</span>
+                    </div>
+                    <div class="price-row total-row">
+                        <span class="row-label-bold">Total Payable</span>
+                        <span id="grand-total" class="row-value-bold">₹0.00</span>
+                    </div>
+                </div>
+
+                <!-- Contextual Dynamic Wizard Navigation Button Control -->
+                <button id="book-now-btn" class="checkout-btn" disabled>
+                    <span id="btn-text">Proceed to Next Step</span> <i id="btn-icon" class="fa-solid fa-arrow-right"></i>
+                </button>
+                
+                <button id="back-wizard-btn" class="checkout-back-btn hidden">
+                    <i class="fa-solid fa-arrow-left"></i> Go Back
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

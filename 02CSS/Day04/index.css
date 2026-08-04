@@ -1,0 +1,38 @@
+h2{
+    background-color:aqua;
+    border: 2px;
+    border-style: solid;
+    border-color: brown;
+    width: 50vw;
+    height: 100px;
+    border-width: 5px 10px 15px 25px;
+             /*top right bottom left 
+             clockwise milti hai 4 value dalne par */
+    padding: 10px 20px 30px 40px;  
+    margin: 20px 50px 70px 30px;       
+}
+ul{
+    background-color:pink;
+    border: 5px green inset;
+}
+h3{
+    background-color: darkkhaki;
+    border: 4px inset orange;
+    border-left-width: 10px; 
+    border-left-color: blue;
+    border-width: 7px 20px;
+    /* when we have 2 options for border width 
+    then it will allocated to top and bottom
+    or left and right */
+    margin: 40px;
+
+
+}
+p{
+    color: crimson;
+    background-color: darkgray;
+    border: 3px;
+    border-style: inset;
+    border-color: darkblue;
+    padding: 10px;
+}

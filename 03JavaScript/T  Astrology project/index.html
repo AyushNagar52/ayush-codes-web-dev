@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astrology Insight</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>AstroVerse</h2>
+    <form id="astroForm">
+      <input type="text" id="firstName" placeholder="First Name" required>
+      <input type="text" id="lastName" placeholder="Surname" required>
+      <input type="number" id="birthDay" placeholder="Day (1-31)" min="1" max="31" required>
+      <input type="number" id="birthMonth" placeholder="Month (1-12)" min="1" max="12" required>
+      <input type="number" id="birthYear" placeholder="Birth Year (e.g., 2000)" required>
+      <button type="submit">Check Zodiac</button>
+    </form>
+    <div id="result"></div>
+  </div>
+ 
+
+  <script src="astro.js"> </script>
+</body>
+
+</html>

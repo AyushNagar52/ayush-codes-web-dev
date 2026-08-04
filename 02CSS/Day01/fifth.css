@@ -1,0 +1,9 @@
+/* select by descendent */
+section p{
+    background-color: aqua;
+}
+
+/* select by child */
+section > p{
+    background-color: brown;
+}

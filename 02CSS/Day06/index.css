@@ -1,0 +1,30 @@
+.container{
+    background-color: aqua;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    display: inline-block;
+}
+
+.box1{
+    background-color: palevioletred;
+
+}
+
+.box2{
+    background-color: darkgreen
+}
+
+.box3{
+    background-color: slategrey;
+}
+
+.box4{
+    background-color: orange;
+}
