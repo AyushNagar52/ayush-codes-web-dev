@@ -1,14 +1,119 @@
-# Node / Binaries
-Revision/
+# ==============================================================================
+# Dependencies
+# ==============================================================================
 node_modules/
+jspm_packages/
+web_modules/
 .pnpm-store/
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
 
-# Production / Build output
+# ==============================================================================
+# Production / Build Outputs
+# ==============================================================================
 dist/
+dist-ssr/
 build/
 out/
+.output/
+.next/
+.nuxt/
+.astro/
+.svelte-kit/
+.turbo/
+.parcel-cache/
+.cache/
+.vite/
+*.tsbuildinfo
 
-# Operating System files
+# ==============================================================================
+# Environment Variables & Secrets
+# ==============================================================================
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.cert
+*.crt
+
+# ==============================================================================
+# Logs & Runtime State
+# ==============================================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+mongod.log*
+.node_repl_history
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ==============================================================================
+# Local Databases & Data Stores
+# ==============================================================================
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.wt
+*.bson
+diagnostic.data/
+journal/
+mongod.lock
+WiredTiger.lock
+data/
+db/data/
+
+# ==============================================================================
+# Testing & Coverage
+# ==============================================================================
+coverage/
+.nyc_output/
+*.lcov
+.playwright/
+test-results/
+playwright-report/
+blob-report/
+
+# ==============================================================================
+# C / C++ & Native Binaries
+# ==============================================================================
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.a
+*.so
+*.dylib
+*.dll
+
+# ==============================================================================
+# Archives & Standalone Binaries
+# ==============================================================================
+node-v*-*
+*.tar
+*.tar.gz
+*.tar.xz
+*.zip
+*.7z
+*.rar
+*.tgz
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
 .DS_Store
 .DS_Store?
 ._*
@@ -16,34 +121,32 @@ out/
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
+.directory
+.fuse_hidden*
 
+# ==============================================================================
 # IDEs and Code Editors
+# ==============================================================================
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .idea/
+*.iml
+*.iws
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*~
+.#*
 
-# Logs & debugging
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Environment variables & local configs
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Temporary / Backup files
+# ==============================================================================
+# Temporary / Backup Files
+# ==============================================================================
 *.tmp
+*.temp
 *.bak
